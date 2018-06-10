@@ -101,5 +101,6 @@ button {
     color:white;
 }
 a {
-    color:#0bd3d3
+    color:#0bd3d3;
+    font-family:'Ubuntu', sans-serif;
 }
