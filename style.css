@@ -1,67 +1,86 @@
 body {
-    background-color:#777;
-    color:#777;
-    font-family:sans-serif;
+    background-image:url("../Bootstrap-Portfolio/images/qbkls/qbkls.png");
     width:960px;
-    font-size:18px;    
 }
-
-.Top {
-    color: #333;
-    background-color:#ebebeb;
-    font-size:24px;
-    text-align:center;
+.banner {
     padding:40px;
-    margin-bottom:10px;
-}
-#Clock {
-    background-color:#ebebeb;
-    float:left;
-    width: 495px;
-    text-align:center;
-    margin-top:10px;
+    background-color:white;
+    border-bottom: 2px solid #cccccc;
+    width:100%;
+    position: absolute;
 
 }
-aside {
-    background-color:#ebebeb; 
-    float: right;
-    width:410px;
-    padding:20px;
-    height:267px;
+.headA {
+    background-color:#4aaaa5;
+    width:120px;
+    padding:28px;
+    position:relative;
     text-align:center;
-    margin-top:10px;
-
-}
-article {
-    background-color:#333;
+    font-size:24px;
+    font-weight:bold;
+    font-family:'Ubuntu', sans-serif;
     color:white;
-    padding:20px;
-    text-align:center;
-    margin:20px;
+    left:170px;
 }
-
-h1 {
-    color:#777;
-    background-color:#ebebeb;
-    padding:20px;
-    text-align:center;
+.ldash ul, li+li:before{
+    padding: 8px;
+    color:#777777;;
+    content: "/\00a0";
 }
-
+.navA ul, li {
+    display:inline;
+    position: relative;
+    color:#777777;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    left:450px;
+    bottom:20px;
+}
+.col-md-12 {
+    background-color:white;
+    width:500px;
+    height:400px;
+    margin:30px;
+    margin-left:170px;
+    border: solid 2px #cccccc;
+}
+#abMe {
+    font-size:24px;
+    font-weight:bold;
+    font-family:'Ubuntu', sans-serif;
+    color:#4aaaa5;
+    padding-top:20px;
+    padding-bottom:20px;
+    border: solid 2px #ffffff;
+}
+#kobe {
+    width:280px;
+    height: auto;
+}
 p {
-    color:#777;
-    background-color:#ebebeb;
-    padding:20px;
-    text-align:center;
+    font-family: 'Sunflower', sans-serif;
+    color:#777777;
+    font-style: italic;
+    margin-left:50px;
 }
-
 .footer {
     padding:20px;
-    color: #333;
-    background-color:#ebebeb;
-    font-size:24px;
-    float:left;
-    width:96%;
-    margin-top:20px;
+    padding-bottom:10px;
+    background-color:#666666;
+    color:white;
+    border-top: 8px solid #4aaaa5;
+    width:100%;
+    position: absolute;
     text-align:center;
-    margin-bottom:30px;
+    margin-top:80px;
+    font-size: 12px;
+    padding-top:40px;
+
+}
+button {
+    color:#777777;
+    font-family: 'Sunflower', sans-serif;
+}
+.input-group{
+    font-family: 'Sunflower', sans-serif;
 }
