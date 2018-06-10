@@ -11,7 +11,7 @@ body {
 
 }
 .headA {
-    background-color:#4aaaa5;
+    background-color:#0bd3d3;
     width:120px;
     padding:28px;
     position:relative;
@@ -24,13 +24,13 @@ body {
 }
 .ldash ul, li+li:before{
     padding: 8px;
-    color:#777777;;
+    color:#d0d0d0;;
     content: "/\00a0";
 }
 .navA ul, li {
     display:inline;
     position: relative;
-    color:#777777;
+    color:#d0d0d0;
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     left:450px;
@@ -39,29 +39,30 @@ body {
 .col-md-12 {
     background-color:white;
     width:500px;
-    height:400px;
+    height:850px;
     margin:30px;
     margin-left:170px;
-    border: solid 2px #cccccc;
+    border: solid 2px 	#f890e7;
 }
 #abMe {
     font-size:24px;
     font-weight:bold;
     font-family:'Ubuntu', sans-serif;
-    color:#4aaaa5;
+    color:#0bd3d3;
     padding-top:20px;
     padding-bottom:20px;
-    border: solid 2px #ffffff;
 }
 #kobe {
     width:280px;
     height: auto;
+    border: solid 2px #f890e7;
 }
 p {
     font-family: 'Sunflower', sans-serif;
-    color:#777777;
+    color:#d0d0d0;
     font-style: italic;
     margin-left:50px;
+    font-weight: bold;
 }
 .footer {
     padding:20px;
@@ -78,9 +79,24 @@ p {
 
 }
 button {
-    color:#777777;
+    color:black;
+    font-weight: bold;
     font-family: 'Sunflower', sans-serif;
 }
 .input-group{
     font-family: 'Sunflower', sans-serif;
+}
+#portfP {
+    position: static;
+    width:200px;
+    height:200px;
+}
+.gametitle {
+    position: relative;
+    padding:10px;
+    background-color:#0bd3d3;
+    width:200px;
+    bottom:50px;
+    font-family: 'Sunflower', sans-serif;
+    color:white;
 }
