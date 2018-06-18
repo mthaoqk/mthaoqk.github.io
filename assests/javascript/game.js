@@ -9,6 +9,7 @@ $("#gameScreen").text(random);
   var sapphire= Math.floor(Math.random()*11+1)
   var diamond= Math.floor(Math.random()*11+1)
   var emerald= Math.floor(Math.random()*11+1)
+  var random=Math.floor(Math.random() * 80 +1);
 
   var gemScore= 0; 
   var Wins= 0;
@@ -19,10 +20,17 @@ $("#gameScreen").text(random);
   $("#losses").text("Losses :" + Losses);
 
   //To reset
-  function reset() {
-    $("#crystalValue").reset();
-    $("#gameScreen").reset();
-  }
+  function reset(){
+    random=Math.floor(Math.random()*101+19);
+    console.log(random)
+    $("#gameScreen").text(random);
+    ruby= Math.floor(Math.random()*11+1);
+    sapphire= Math.floor(Math.random()*11+1);
+    diamond= Math.floor(Math.random()*11+1);
+    emerald= Math.floor(Math.random()*11+1);
+    gemScore= 0;
+    $("crystalValue").text(gemScore);
+    } 
   //Function after win
   function winner(){
     alert("W!");
