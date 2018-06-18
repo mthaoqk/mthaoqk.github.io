@@ -21,7 +21,7 @@ $("#gameScreen").text(random);
 
   //To reset
   function reset(){
-    random=Math.floor(Math.random()*101+19);
+    random=Math.floor(Math.random()*80 + 1);
     console.log(random)
     $("#gameScreen").text(random);
     ruby= Math.floor(Math.random()*11+1);
