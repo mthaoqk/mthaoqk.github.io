@@ -1,32 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Guess the letter</title>
-  <link href="https://fonts.googleapis.com/css?family=Nunito|Sunflower:300" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Collector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="assests/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assests/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="assests/javascript/game.js"></script>
+
+
 </head>
 
 <body>
-  <h1> Input a letter, get the letter correct 3 times to win</h1>
-  <hr>
-        <div id="game">
-            <p>Wins: <div id="idWin">0</div></p>
-            <p>Losses: <div id="idLoss">0</div></p>
-            <p>Guesses Left: <div id="idGuessesLeft">20</div></p>
-            <p>Your Guesses so far: <div id="idGuessSoFar"></div></p>
-            <img src="https://media1.tenor.com/images/37675e7b16e50e695d1d5b8afd966db9/tenor.gif?itemid=5287853"/>
-  
+    <h1> Crystal Collector </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p id="mainBody">
+                    We're going to play a game where a number will be generated on one of the Game Screen.
+                    <br> Your goal is to click the gems which will be different variables
+                    <br> and try to get the exact score, one over and you lose.
+                    <br> Each win the variables will change up, get 5 W's to win, otherwise 5 losses you will take the L.
+                </p>
+
+            </div>
         </div>
 
+        <!-- Row 1 -->
+        <div class="row">
+            <div class="col-md-6">
+                <p id="gameScreen">
+
+                </p>
+
+            </div>
+        </div>
+        <!-- right side -->
+        <div class="col-md-6">
+            <div class="winsLosses">
+                <p id="wins"></p>
+                <p id="losses"></p>
+            </div>
+        </div>
+
+        <!-- Row 2-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="gem">
+                    <button id="ruby">
+                        <img id="rubyPic" src="assests/images/ruby-stone.jpg" /> </button>
+                    <button id="sapphire">
+                        <img id="sapphirePic" src="assests/images/Sapphire.jpg" /> </button>
+                    <button id="diamond">
+                        <img id="diamondPic" src="assests/images/flawless-diamond.png" /> </button>
+                    <button id="emerald">
+                        <img id="emeraldPic" src="assests/images/Emerald.jpg" /> </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="results">
+                <p id="crystalValue">
+
+                </p>
+            </div>
+
+        </div>
+    </div>
 
 
 
 
 
-<script type="text/javascript" src="assets/javascript/game.js"></script>        
 </body>
 
 </html>
