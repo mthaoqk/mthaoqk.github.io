@@ -29,7 +29,7 @@ $("#gameScreen").text(random);
     diamond= Math.floor(Math.random()*11+1);
     emerald= Math.floor(Math.random()*11+1);
     gemScore= 0;
-    $("crystalValue").text(gemScore);
+    $("#crystalValue").text(gemScore);
     } 
   //Function after win
   function winner(){
