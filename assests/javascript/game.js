@@ -35,14 +35,14 @@ $("#gameScreen").text(random);
   function winner(){
     alert("W!");
       Wins++; 
-      $("#wins").text(Wins);
+      $("#wins").text("Wins : " + Wins);
       reset();
   }
   //Function after lost
   function loser(){
     alert ("L!");
       Losses++;
-      $("#losses").text(Losses);
+      $("#losses").text("Losses : " + Losses);
       reset()
   }
   //buttonValues
