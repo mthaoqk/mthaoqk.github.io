@@ -1,5 +1,7 @@
 window.onload = function(){
 	$("#start").on("click", clock.start);
+
+	//Quiz
 	function buildQuiz() {
 	  const output = [];
 
@@ -104,6 +106,7 @@ window.onload = function(){
 	buildQuiz();
 	submitButton.addEventListener("click", showResults);
 };
+//Timers
   var intervalId;
 
   var clockRunning = false;
@@ -114,23 +117,20 @@ window.onload = function(){
 
     start: function() {
       if (!clockRunning) {
-        intervalId = setInterval(clock.count, 10);
-        clockRunning = true;
+        intervalId = setInterval(clock.count, 100);
+				clockRunning = true;
+				if (time === 0){
+					alert("Time's up!")
+						}
+						
       }
     },
     count: function() {
       clock.time--;
       var converted = clock.timeConverter(clock.time);
-      console.log(converted);
       $("#display").text(converted);
-    },
-    stop: function() {
-      clearInterval(intervalId);
-      clockRunning = false;
-      if (time ==  0) {
-        alert("Times up!")
-      }
-    },
+		},
+		
         timeConverter: function(t) {
   
       var minutes = Math.floor(t / 60);
@@ -149,3 +149,6 @@ window.onload = function(){
   
       return minutes + ":" + seconds;
 	}};
+	function timeUp() {
+		$("#results").append("<h2>Time's Up!</h2>");
+		console.log("time is up");}
