@@ -4,83 +4,29 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Crystal Collector</title>
+    <title>Trivia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Ubuntu" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="assests/css/reset.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assests/css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <script src="assests/javascript/game.js"></script>
 
-
+    <script src="assets/javascript/game.js"></script>
 </head>
 
 <body>
-    <h1> Crystal Collector </h1>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <p id="mainBody">
-                    We're going to play a game where a number will be generated on one of the Game Screen.
-                    <br> Your goal is to click the gems which will be different variables
-                    <br> and try to get the exact score, one over and you lose.
-                    <br> Each win the variables will change up, get 5 W's to win, otherwise 5 losses you will take the L.
-                </p>
-
-            </div>
-        </div>
-
-        <!-- Row 1 -->
-        <div class="row">
-            <div class="col-md-6">
-                <p id="gameScreen">
-
-                </p>
-
-            </div>
-        </div>
-        <!-- right side -->
-        <div class="col-md-6">
-            <div class="winsLosses">
-                <p id="wins"></p>
-                <p id="losses"></p>
-            </div>
-        </div>
-
-        <!-- Row 2-->
-        <div class="row">
-            <div class="col-md-12">
-                <div class="gem">
-                    <button id="ruby">
-                        <img id="rubyPic" src="assests/images/ruby-stone.jpg" /> </button>
-                    <button id="sapphire">
-                        <img id="sapphirePic" src="assests/images/Sapphire.jpg" /> </button>
-                    <button id="diamond">
-                        <img id="diamondPic" src="assests/images/flawless-diamond.png" /> </button>
-                    <button id="emerald">
-                        <img id="emeraldPic" src="assests/images/Emerald.jpg" /> </button>
-                </div>
-            </div>
-        </div>
+    <h1>Shoe Trivia</h1>
+    <div id="display">
+        00:60
+        <br>
+        <button id="start">Start</button>
     </div>
-
-    <!-- Row 3 -->
-    <div class="row">
-        <div class="col-md-12">
-            <div class="results">
-                <p id="crystalValue">
-
-                </p>
-            </div>
-
-        </div>
-    </div>
-
-
-
-
-
+    <div id="quiz"></div>
+    <button id="submit">Submit Quiz</button>
+    <div id="results"></div>
+    
 </body>
 
 </html>
