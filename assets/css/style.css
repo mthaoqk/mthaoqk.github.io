@@ -5,6 +5,7 @@ h1 {
     text-align: center;
     color:white;
     font-family: 'Roboto Mono', monospace;
+
 }
 h2 {
     color:white;
@@ -14,30 +15,38 @@ button {
     background-color:white;
     font-family: 'Montserrat', sans-serif;
     border: 3px solid white;
-    border-radius: 20px 50px;
+    border-radius: 50px 20px;
+    font-weight: bold;
 }
 label {
     background-color:white;
     font-family: 'Montserrat', sans-serif;
     border: 3px solid white;
-    border-radius: 20px 50px;
+    border-radius: 50px 20px;
+    font-weight: bold;
 }
 input {
     background-color:white;
     font-family: 'Montserrat', sans-serif;
     border: 3px solid white;
-    border-radius: 20px 50px;
+    border-radius: 50px 20px;
+    font-weight: bold;
 }
 p{
     color:white;
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 img {
     border: 3px solid white;
-    border-radius: 50px 20px;
+    border-radius: 20px 50px;
+}
+hr {
+    background-color:white;
 }
 #search-form {
     float:right;
+    position:fixed;
 }
 #goal {
     text-align: center;
