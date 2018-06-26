@@ -1,5 +1,5 @@
 
-var celebArr = ["Kevin Garnett", "Steph Curry", "Kobe", "Terrel Owens", "Ichiro Suzuki"];
+var celebArr = ["Kevin Garnett", "Steph Curry", "Kobe", "Terrel Owens", "Messi", "Ronaldo"];
 
 function reset() {
 
@@ -32,7 +32,7 @@ function searchGifs() {
   var searchStr = searchTerm.split(" ").join("+");
 
   var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchStr +
-    "&rating=pg-13&limit=10&api_key=SfvSaTL9665ruP7tCdjaRkGEcKkWgyE7";
+    "+celebration&rating=pg-13&limit=10&api_key=SfvSaTL9665ruP7tCdjaRkGEcKkWgyE7";
 
   $.ajax({
     method: "GET",
