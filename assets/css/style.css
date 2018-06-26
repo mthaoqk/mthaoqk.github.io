@@ -1,28 +1,46 @@
-body{
-    background-image:url("../images/chalkboard.jpg");
-    font-family: 'Cabin Sketch', cursive;
-    font-size:24px;
+body {
+    background-image: url("../images/hodgepodge.png")
+}
+h1 {
+    text-align: center;
+    color:white;
+    font-family: 'Roboto Mono', monospace;
+}
+h2 {
     color:white;
     text-align: center;
 }
-button{
-    font-size: 24px;
+button {
+    background-color:white;
+    font-family: 'Montserrat', sans-serif;
+    border: 3px solid white;
+    border-radius: 20px 50px;
 }
-#justDo {
-    width:200px;
-    height:200px;
-    float:left;
+label {
+    background-color:white;
+    font-family: 'Montserrat', sans-serif;
+    border: 3px solid white;
+    border-radius: 20px 50px;
 }
-#adidas {
-    width:200px;
-    height:200px;
+input {
+    background-color:white;
+    font-family: 'Montserrat', sans-serif;
+    border: 3px solid white;
+    border-radius: 20px 50px;
+}
+p{
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+}
+img {
+    border: 3px solid white;
+    border-radius: 50px 20px;
+}
+#search-form {
     float:right;
 }
-.question {
-    font-size: 20px;
+#goal {
     text-align: center;
-}
-#splash {
-    width: 1024px;
-    height:786px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }

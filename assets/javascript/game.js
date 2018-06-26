@@ -1,154 +1,85 @@
-window.onload = function(){
-	$("#start").on("click", clock.start);
 
-	//Quiz
-	function buildQuiz() {
-	  const output = [];
+var celebArr = ["Kevin Garnett", "Steph Curry", "Kobe", "Terrel Owens", "Ichiro Suzuki"];
 
-	  myQuestions.forEach((currentQuestion, questionNumber) => {
-		const answers = [];
-		for (letter in currentQuestion.answers) {
-		  answers.push(
-			`<label>
-			  <input type="radio" name="question${questionNumber}" value="${letter}">
-			  ${letter} :
-			  ${currentQuestion.answers[letter]}
-			</label>`
-		  );
-		}
-		output.push(
-		  `<div class="question"> ${currentQuestion.question} </div>
-		  <div class="answers"> ${answers.join("")} </div>`
-		);
-	  });
-	  quizContainer.innerHTML = output.join("");
-	}
-  
-	function showResults() {
+function renderButtons() {
 
-	  const answerContainers = quizContainer.querySelectorAll(".answers");
-  
-	  let numCorrect = 0;
-  
-	  myQuestions.forEach((currentQuestion, questionNumber) => {
-		const answerContainer = answerContainers[questionNumber];
-		const selector = `input[name=question${questionNumber}]:checked`;
-		const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-  
-		if (userAnswer === currentQuestion.correctAnswer) {
-		  numCorrect++;
+  $("#buttonPanel").empty();
 
-		  answerContainers[questionNumber].style.color = "green";
-		} else {
-		  answerContainers[questionNumber].style.color = "red";
-		}
-	  });
-  
-	  resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
-	}
-  
-	const quizContainer = document.getElementById("quiz");
-	const resultsContainer = document.getElementById("results");
-	const submitButton = document.getElementById("submit");
-	const myQuestions = [
-			{
-			question: "This famous shoe brands original name was Blue Sports Ribbon",
-			answers: {
-				a: "Nike",
-				b: "Adidas",
-				c: "Asics",
-				d: "Reebok"
-			},
-			correctAnswer: "a"
-		},
-		{
-			question: "Run DMC was endorsed by this brand after a performance at Madison Square Garden",
-			answers: {
-					a: "Puma",
-					b: "Champion",
-					c: "Nike",
-					d: "Adidas"
-			},
-			correctAnswer: "d"
-		},
-		{
-			question: "This signature athlethe was so popular, his own signature line of shoes became its own brand?",
-			answers: {
-				a: "Bo Jackson",
-				b: "Ken Griffey Jr.",
-				c: "Michael Jordan",
-				d: "Magic Johnson"
-			},
-			correctAnswer: "c"
-		},
-		{
-			question: "Michael Jordans first choice of brand to sign was?",
-			answers: {
-				a: "Adidas",
-				b: "Converse",
-				c: "Reebok",
-				d: "Puma"
-			},
-			correctAnswer: "a"
-		},
-		{
-			question: "The original nike swoosh was bought for?",
-			answers: {
-				a: "35$",
-				b: "125$",
-				c: "580$",
-				d: "1430$"
-			},
-			correctAnswer: "a"
-		}
-		
-		];
-	buildQuiz();
-	submitButton.addEventListener("click", showResults);
-};
-//Timers
-  var intervalId;
+  for (var i = 0; i < celebArr.length; i++) {
+    var button = $("<button>");
+    button.addClass("searchButton");
+    button.attr("data-search", celebArr[i]);
+    button.text(celebArr[i]);
 
-  var clockRunning = false;
+    $("#buttonPanel").append(button);
+  }
+}
 
-  var clock = {
-  
-    time:60,
+$("#add-search").on("click", function(event) {
+  event.preventDefault();
 
-    start: function() {
-      if (!clockRunning) {
-        intervalId = setInterval(clock.count, 100);
-				clockRunning = true;
-				if (time === 0){
-					alert("Time's up!")
-						}
-						
-      }
-    },
-    count: function() {
-      clock.time--;
-      var converted = clock.timeConverter(clock.time);
-      $("#display").text(converted);
-		},
-		
-        timeConverter: function(t) {
+  var searches = $("#search-input").val().trim();
+
+  celebArr.push(searches);
+  $("#search-input").val("");
+
+  renderButtons();
+});
+
+function fetchGifs() {
   
-      var minutes = Math.floor(t / 60);
-      var seconds = t - (minutes * 60);
+  var searchTerm = $(this).attr("data-search");
+  var searchStr = searchTerm.split(" ").join("+");
+
+
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchStr + 
+                 "&rating=pg-13&limit=10&api_key=SfvSaTL9665ruP7tCdjaRkGEcKkWgyE7";
+
+  $.ajax({
+    method: "GET",
+    url: queryURL,
+  })
   
-      if (seconds < 10) {
-        seconds = "0" + seconds;
-      }
-  
-      if (minutes === 0) {
-        minutes = "00";
-      }
-      else if (minutes < 10) {
-        minutes = "0" + minutes;
-      }
-  
-      return minutes + ":" + seconds;
-	}};
-	function timeUp() {
-		$("#results").append("<h2>Time's Up!</h2>");
-		console.log("time is up");}
+  .done(function( response ) {
+ 
+    var dataArray = response.data;
+
+    $("#gifPanel").empty();
+    for (var i = 0; i < dataArray.length; i++) {
+      var newDiv = $("<div>");
+      newDiv.addClass("animalGif");
+
+      var newRating = $("<p>").html("Rating: " + dataArray[i].rating);
+      newDiv.append(newRating);
+
+      var newImg = $("<img>");
+      newImg.attr("src", dataArray[i].images.fixed_height_still.url);
+      newImg.attr("data-still", dataArray[i].images.fixed_height_still.url);
+      newImg.attr("data-animate", dataArray[i].images.fixed_height.url);
+      newImg.attr("data-state", "still");
+      newDiv.append(newImg);
+
+      $("#gifPanel").append(newDiv);
+    }
+  });
+}
+
+function animateGif() {
+
+  var state = $(this).find("img").attr("data-state");
+  if (state === "still") {
+    $(this).find("img").attr("src", $(this).find("img").attr("data-animate"));
+    $(this).find("img").attr("data-state", "animate");
+  } else {
+    $(this).find("img").attr("src", $(this).find("img").attr("data-still"));
+    $(this).find("img").attr("data-state", "still");
+  }
+}
+
+$(document).ready(function() {
+  renderButtons();
+});
+
+$(document).on("click", ".searchButton", fetchGifs);
+
+$(document).on("click", ".animalGif", animateGif);
