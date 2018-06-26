@@ -1,7 +1,7 @@
 
 var celebArr = ["Kevin Garnett", "Steph Curry", "Kobe", "Terrel Owens", "Ichiro Suzuki"];
 
-function renderButtons() {
+function reset() {
 
   $("#buttonPanel").empty();
 
@@ -15,7 +15,7 @@ function renderButtons() {
   }
 }
 
-$("#add-search").on("click", function(event) {
+$("#add-search").on("click", function (event) {
   event.preventDefault();
 
   var searches = $("#search-input").val().trim();
@@ -23,45 +23,44 @@ $("#add-search").on("click", function(event) {
   celebArr.push(searches);
   $("#search-input").val("");
 
-  renderButtons();
+  reset();
 });
 
-function fetchGifs() {
-  
+function searchGifs() {
+
   var searchTerm = $(this).attr("data-search");
   var searchStr = searchTerm.split(" ").join("+");
 
-
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchStr + 
-                 "&rating=pg-13&limit=10&api_key=SfvSaTL9665ruP7tCdjaRkGEcKkWgyE7";
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchStr +
+    "&rating=pg-13&limit=10&api_key=SfvSaTL9665ruP7tCdjaRkGEcKkWgyE7";
 
   $.ajax({
     method: "GET",
     url: queryURL,
   })
-  
-  .done(function( response ) {
- 
-    var dataArray = response.data;
 
-    $("#gifPanel").empty();
-    for (var i = 0; i < dataArray.length; i++) {
-      var newDiv = $("<div>");
-      newDiv.addClass("animalGif");
+    .done(function (response) {
 
-      var newRating = $("<p>").html("Rating: " + dataArray[i].rating);
-      newDiv.append(newRating);
+      var dataArray = response.data;
 
-      var newImg = $("<img>");
-      newImg.attr("src", dataArray[i].images.fixed_height_still.url);
-      newImg.attr("data-still", dataArray[i].images.fixed_height_still.url);
-      newImg.attr("data-animate", dataArray[i].images.fixed_height.url);
-      newImg.attr("data-state", "still");
-      newDiv.append(newImg);
+      $("#gifPanel").empty();
+      for (var i = 0; i < dataArray.length; i++) {
+        var newDiv = $("<div>");
+        newDiv.addClass("searchGif");
 
-      $("#gifPanel").append(newDiv);
-    }
-  });
+        var newRating = $("<p>").html("Rating: " + dataArray[i].rating);
+        newDiv.append(newRating);
+
+        var newImg = $("<img>");
+        newImg.attr("src", dataArray[i].images.fixed_height_still.url);
+        newImg.attr("data-still", dataArray[i].images.fixed_height_still.url);
+        newImg.attr("data-animate", dataArray[i].images.fixed_height.url);
+        newImg.attr("data-state", "still");
+        newDiv.append(newImg);
+
+        $("#gifPanel").append(newDiv);
+      }
+    });
 }
 
 function animateGif() {
@@ -76,10 +75,10 @@ function animateGif() {
   }
 }
 
-$(document).ready(function() {
-  renderButtons();
+$(document).ready(function () {
+  reset();
 });
 
-$(document).on("click", ".searchButton", fetchGifs);
+$(document).on("click", ".searchButton", searchGifs);
 
-$(document).on("click", ".animalGif", animateGif);
+$(document).on("click", ".searchGif", animateGif);
