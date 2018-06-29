@@ -1,0 +1,22 @@
+body {
+    background-image:url("../images/science.png");
+    color:white;
+    font-family: 'Ubuntu', sans-serif;
+}
+h1 {
+    color:white;
+    font-size: 48px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    border: dashed 5px #842B27;
+    border-radius: 30px 30px;
+}
+.jumbotron {
+    background-color: #FF7665;
+    border-radius: 50px 50px;
+}
+.panel-default {
+    background-color: #FF7665;
+    border: solid 2px #842B27;
+}
