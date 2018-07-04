@@ -1,22 +1,76 @@
 body {
-    background-image:url("../images/science.png");
-    color:white;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Indie Flower', cursive;
+    background-image:url(../images/alchemy.gif);
+    font-weight: bold;
 }
 h1 {
-    color:white;
-    font-size: 48px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Eczar', serif;
+    text-align: justify;
     font-weight: bold;
-    font-style: italic;
-    border: dashed 5px #842B27;
-    border-radius: 30px 30px;
+    font-size: 24px;
+    background-color: white;
+    margin-bottom:30px;
+    border-bottom: 3px solid #0bd3d3;
 }
+h3 {
+    color:white;
+    margin-top:4px;
+}
+hr {
+    background-color: #0bd3d3;
+}
+footer {
+    text-align: center;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    height:40px;
+    background:	#d0d0d0;
+    border-top: 3px solid #0bd3d3;
+    margin-top:10px;
+ }
 .jumbotron {
-    background-color: #FF7665;
-    border-radius: 50px 50px;
+    background-color: white;
+    border: 3px solid #0bd3d3;
+    border-radius: 20px 50px;
+
 }
-.panel-default {
-    background-color: #FF7665;
-    border: solid 2px #842B27;
+
+#aboutme {
+    color:black;
+    font-size: 32px;
+    font-family: 'Eczar', serif;
+    font-weight: bold;
+}
+#justdo{
+    width: 100px;
+    height: 100px;
+}
+#name {
+    background-color: #0bd3d3;
+    width: 150px;
+    position: relative;
+    left:200px;
+    text-align: center;
+    color:white;
+    padding:30px
+}
+.blockT {
+    position: relative;
+    background-color: #0bd3d3;
+    bottom:60px;
+    width:200px;
+    border: 3px solid white;
+    border-radius: 50px 50px;
+    text-align: center;
+    font-weight: bold;
+}
+#meng {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px 50px;
+}
+.icon {
+    width:50px;
+    height:50px;
 }
