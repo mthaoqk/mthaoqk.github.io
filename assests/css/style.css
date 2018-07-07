@@ -29,6 +29,25 @@ footer {
     border-top: 3px solid #FF5535;
     margin-top:10px;
  }
+ /* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: #50D2D5;
+}
+
+/* mouse over link */
+a:hover {
+    color: #FFB34A;
+}
+
+/* selected link */
+a:active {
+    color: #FF5535;
+}
 #letter {
     font-family: 'Eczar', serif;
     font-weight: bold;
