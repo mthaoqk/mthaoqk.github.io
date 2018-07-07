@@ -31,17 +31,17 @@ footer {
  }
  /* unvisited link */
 a:link {
-    color: white;
+    color: #FFB34A;
 }
 
 /* visited link */
 a:visited {
-    color: #50D2D5;
+    color: white;
 }
 
 /* mouse over link */
 a:hover {
-    color: #FFB34A;
+    color: #FF5535;
 }
 
 /* selected link */
@@ -89,7 +89,7 @@ a:active {
 }
 .blockT {
     position: relative;
-    background-color: #FF5535;
+    background-color: #388FB2;
     bottom:60px;
     width:200px;
     border: 3px solid white;
@@ -103,4 +103,11 @@ a:active {
     border-radius: 20px 50px;
     background-image: url(../images/pw_maze_white_@2X.png);
 
+}
+ul {
+    border: 3px solid white;
+    border-radius: 50px 50px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #388FB2;
 }
