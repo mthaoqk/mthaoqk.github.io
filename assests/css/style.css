@@ -1,6 +1,6 @@
 body {
     font-family: 'Indie Flower', cursive;
-    background-image: url(../images/alchemy.gif);
+    /* background-image: url(../images/alchemy.gif); */
     font-weight: bold;
 }
 
@@ -9,7 +9,7 @@ h1 {
     text-align: justify;
     font-weight: bold;
     font-size: 24px;
-    background-image: url(../images/pw_maze_white_@2X.png);
+    background-color: #222;
     margin-bottom: 30px;
     border-bottom: 3px solid #FF5535;
 }
@@ -29,9 +29,10 @@ footer {
     position: relative;
     width: 100%;
     height: 40px;
-    background-image: url(../images/pw_maze_white_@2X.png);
+    background-color: #222;
     border-top: 3px solid #FF5535;
     margin-top: 10px;
+    color:white;
 }
 
 ul {
@@ -82,7 +83,8 @@ a:active {
     /* background-color: white; */
     border: 3px solid #FF5535;
     border-radius: 20px 20px;
-    background-image: url(../images/pw_maze_white_@2X.png);
+    background-color: #222;
+    color: white;
 }
 
 #aboutme {
