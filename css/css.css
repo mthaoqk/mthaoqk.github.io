@@ -71,6 +71,7 @@ a.two:active {
 }
 #letter {
     font-weight: bold;
+    text-align: left;
 }
 #carousel {
     font-family: 'Ubuntu Condensed', monospace;
