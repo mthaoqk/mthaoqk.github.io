@@ -96,6 +96,9 @@ a.two:active {
   font-weight: bold;
   text-align: left;
 }
+#headerDeux {
+  font-weight: bold;
+}
 .icon {
   height: 40px;
   width: 40px;
