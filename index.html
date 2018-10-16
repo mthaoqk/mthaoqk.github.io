@@ -2,136 +2,157 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Meng</title>
-  <!-- CSS  -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
+	<title>Meng Thao: Portfolio</title>
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+	<link rel="stylesheet" href="assets/CSS/CSS.css">
+	<link rel="icon" href="assets/Images/Wolves.png">
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu" rel="stylesheet">
-  <link rel="icon" href="./images/Wolves.png">
-  <script src="./js/js.js"></script>
 </head>
 
 <body>
-  <!-- Header -->
-  <div class="navbar-fixed">
-    <nav id="header">
-      <ul id="dropdown1" class="dropdown-content">
-        <li>
-          <a href="https://github.com/mthaoqk" target="_blank">
-            <img class="icon" src="./images/GitHub.png" /> GitHub
-          </a>
-        </li>
-        <li class="divider"></li>
-        <li>
-          <a href="https://www.linkedin.com/in/meng-thao-41b332104/" target="_blank">
-            <img class="icon" src="./images/linkedin.png" /> Linkedin
-          </a>
-        </li>
-        <li class="divider"></li>
-        <li>
-          <a href="mailto:mthaoqk09@yahoo.com">
-            <img class="icon" src="./images/Email.png" />
-            <br>Email
-          </a>
-        </li>
-      </ul>
+
+	<div class="container">
+
+		<div id="carousel">
+			<div class="carousel-item">
+				<div class="left">
+					<p><a href="#">Play</a> a game of Tetris made from JavaScript.</p>
+
+				</div>
+
+				<div class="center">
+					<h1>Tetris</h1>
+					<p>Tetris is a tile-matching
+						<br>puzzle video game.</p>
+					<img class="project-img" src="assets/Images/TetrisSC.png" alt="Tetris">
+					<br>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<div class="left">
+					<p>An online <a href="https://whiteboardstudio.herokuapp.com/" target="_blank">whiteboard</a>, which can be used
+						by
+						<br>
+						multiple people in realtime.
+						<br>Boards can be downloaded</p>
+				</div>
+
+				<div class="center">
+					<h1>Whiteboard</h1>
+					<p>Draw live and <br>communicate with friends.</p>
+					<img class="project-img" src="assets/Images/Wb.png" alt="Whiteboard">
+
+				</div>
+
+			</div>
+
+			<div class="carousel-item">
+				<div class="left">
+					<p><a href="https://mthaoqk.github.io/HangmanGame/" target="_blank"> Play</a> a game of Hangman<br>
+						to guess my top 5 Kanye Albums.</p>
+				</div>
+
+				<div class="center">
+					<h1>Ye</h1>
+					<p>Hangman.<br>Game of guesses.</p>
+					<img class="project-img" src="assets/Images/Ye.png" alt="Ye">
+					<br>
+					<a href="https://mthaoqk.github.io/HangmanGame/" target="_blank"></a>
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- ////////////////MOBILE///////////////////////// -->
+		<div id="carousel-mobile">
+			<div class="carousel-item-mob">
+				<div class="left">
+					<p> Play a game of Tetris made from JavaScript.</p>
+				</div>
+
+				<div class="center">
+					<h1>Tetris</h1>
+					<a href="#"><img class="goPlay" src="assets/Images/play.png" /></a>
+					<p>Tetris is a tile-matching puzzle video game.</p>
+					<img class="project-img" src="assets/Images/TetrisSC.png" alt="">
+					<br>
+				</div>
+			</div>
+
+			<div class="carousel-item-mob">
+				<div class="left">
+					<p>An online whiteboard, which can be used by <br>
+						multiple people in realtime.
+						<br>Boards can be downloaded</p>
+				</div>
+
+				<div class="center">
+					<h1>Whiteboard</h1>
+					<a href="https://whiteboardstudio.herokuapp.com/" target="_blank"><img class="goPlay" src="assets/Images/play.png" /></a>
+					<p>Draw live and communicate with friends.</p>
+					<img class="project-img" src="assets/Images/Wb.png" alt="">
+				</div>
+			</div>
+
+			<div class="carousel-item-mob">
+				<div class="left">
+					<p>Play a game of Hangman<br>
+						to guess my top 5 Kanye Albums.</p>
+				</div>
+
+				<div class="center">
+					<h1>Ye</h1>
+					<a href="https://mthaoqk.github.io/HangmanGame/" target="_blank"><img class="goPlay" src="assets/Images/play.png" /></a>
+					<p>Hangman.<br>Game of guesses.</p>
+					<img class="project-img" src="assets/Images/Ye.png" alt="Ye">
+				</div>
+
+			</div>
+		</div>
+
+		<!-- ////////////////MOBILE///////////////////////// -->
+
+		<div class="bottom">
+			<img src="assets/Images/Meng.png" alt="Profile pic" class="profile-pic">
+			<h1>Meng Thao</h1>
+			<div id="me" class="about-me">
+				<p>Graduate at the U of Minnesota Coding bootcamp. As tech is always evolving and my goal of being a student at
+					life, I truly believe I can bond the two
+					to work together to continuously improve and grow.
+					<br>
+					Check out more projects at my <a href="https://github.com/mthaoqk" target="_blank">Github</a>. Or contact me
+					through <a href="mailto:mthaoqk@gmail.com">Email</a>.</p>
+			</div>
+
+			<div id="skill">
+				<p>Currently working more indepth with:</p>
+				<ul>
+					<li><i class="devicon-javascript-plain colored"> JavaScript</i></li>
+					<li><i class="devicon-react-plain-wordmark colored"> React</i></li>
+					<li><i class="devicon-photoshop-plain colored">Photoshop</i></i></li>
+				</ul>
+				<p>Languages/Databases touched:</p>
+				<ul>
+					<li><i class="devicon-javascript-plain colored"> JavaScript</i></li>
+					<li><i class="devicon-react-plain-wordmark colored"> React</i></li>
+					<li><i class="devicon-jquery-plain colored"> JQuery</i></li>
+					<li><i class="devicon-nodejs-plain colored"> Node.js</i></li>
+					<li><i class="devicon-express-original colored"> Express</i></li>
+					<li><i class="devicon-heroku-plain-wordmark colored"> Heroku</i></li>
+					<li><i class="devicon-mysql-plain colored"> MySQL</i></li>
+					<li><i class="devicon-mongodb-plain-wordmark colored"> MongoDB</i></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
 
-      <div class="nav-wrapper">
-        <img id="wolf" class="responsive-img" src="./images/Wolves.png" />
-        <a class="brand-logo" href="index.html">Meng</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="portfolio.html">Portfolio</a>
-          </li>
-          <li>
-            <li>
-              <a class="dropdown-trigger" href="#!" data-target="dropdown1">Contact
-                <i class="material-icons right">arrow_drop_down</i>
-              </a>
-            </li>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-
-  <!-- Image -->
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-
-    </div>
-    <div class="parallax">
-      <img src="./images/MjKobe.jpg" class="responsive-img" alt="MikeKobe">
-    </div>
-  </div>
-
-
-  <!-- Body -->
-  <div class="container">
-    <div class="row">
-      <div class="col s3">
-        <img id="Meng" class="responsive-img" src="./images/Meng.jpg" />
-      </div>
-      <div class="col s9">
-
-        <blockquote>
-          <p id="message">Welcome, name is Meng Thao, I am a beginner in Full-Stack Development. Check out my projects.
-        </blockquote>
-
-      </div>
-    </div>
-  </div>
-  </div>
-
-
-  <!-- Footer -->
-  <footer class="page-footer black">
-    <div class="footer-copyright">
-      <div class="container">
-        <ul class="nav justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="portfolio.html">Portfolio</a>
-          </li>
-        </ul>
-      </div>
-
-
-      <!-- Contact Icon -->
-      <div class="col s12"></div>
-      <a href="https://github.com/mthaoqk" target="_blank">
-        <img class="icon" src="./images/GitHub.png" />
-        <br> GitHub
-      </a>
-      <a href="https://www.linkedin.com/in/meng-thao-41b332104/" target="_blank">
-        <img class="icon" src="./images/linkedin.png" />
-        <br> Linkedin
-      </a>
-      <a href="mailto:mthaoqk09@yahoo.com">
-        <img class="icon" src="./images/Email.png">
-        <br> Email
-      </a>
-    </div>
-    </div>
-  </footer>
-
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-
+	<script src="assets/JavaScript/scripts.js"></script>
 </body>
 
 </html>
