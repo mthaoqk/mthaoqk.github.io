@@ -2,157 +2,87 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
-	<title>Meng Thao: Portfolio</title>
-	<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-	<link rel="stylesheet" href="assets/CSS/CSS.css">
-	<link rel="icon" href="assets/Images/Wolves.png">
-
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Meng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assests/CSS/CSS.css" />
+    <script src="assests/JS/JS.js"></script>
+    <link rel="icon" href="./assests/Image/Logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Raleway" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 </head>
 
 <body>
+    <header>
+        <div id="headerBack">
+            <h1><span>MENG THAO</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-	<div class="container">
+    <main>
+        <!-- <img id="ye" src="./assests/Image/DQ3Hero.png" alt="Yeez">  -->
+        <h2 id="headerBack"><span>Adversary introduces a man to himself</span></h2>
+        <p>Hey, my name is Meng Thao and I am a graduate of The University of Minnesota Full stack bootcamp program.
+            Designing and discovering new ways to create efficient websites has become a passion of mines, and figuring
+            out how each piece
+            comes a long like a puzzle to complete a beautiful piece is what I strive to do.
+            My main focus is on Front-End at the moment, but I am willing to learn new concepts. Check out my <a
+                href="./projects.html">work</a>.
+        </p>
 
-		<div id="carousel">
-			<div class="carousel-item">
-				<div class="left">
-					<p><a href="https://mthaoqk.github.io/Tetris/" target="_blank">Play</a> a game of Tetris made from JavaScript.</p>
+    </main>
 
-				</div>
+    <aside>
+        <h2 id="headerBack"><span>Currently Studying</span></h2>
+        <ul>
+            <ol><i class="devicon-html5-plain-wordmark colored"> HTML/CSS/Flexbox/Grid</i></ol>
+            <ol><i class="devicon-javascript-plain colored"> JavaScript</i></ol>
+            <ol><i class="devicon-react-plain-wordmark colored"> React</i></ol>
+            <ol><i class="devicon-photoshop-plain colored"> Photoshop</i></ol>
+        </ul>
 
-				<div class="center">
-					<h1>Tetris</h1>
-					<p>Tetris is a tile-matching
-						<br>puzzle video game.</p>
-					<img class="project-img" src="assets/Images/TetrisSC.png" alt="Tetris">
-					<br>
-				</div>
-			</div>
+        <h2 id="headerBack"><span>Technologies Associated</span></h2>
+        <ul>
+            <ol><i class="devicon-javascript-plain colored"> JavaScript</i></ol>
+            <ol><i class="devicon-react-plain-wordmark colored"> React</i></ol>
+            <ol><i class="devicon-jquery-plain colored"> JQuery</i></ol>
+            <ol><i class="devicon-nodejs-plain colored"> Node.js</i></ol>
+            <ol><i class="devicon-express-original colored"> Express</i></ol>
+            <ol><i class="devicon-heroku-plain-wordmark colored"> Heroku</i></ol>
+            <ol><i class="devicon-mysql-plain colored"> MySQL</i></ol>
+            <ol><i class="devicon-mongodb-plain-wordmark colored"> MongoDB</i></ol>
 
-			<div class="carousel-item">
-				<div class="left">
-					<p>An online <a href="https://whiteboardstudio.herokuapp.com/" target="_blank">whiteboard</a>, which can be used
-						by
-						<br>
-						multiple people in realtime.
-						<br>Boards can be downloaded</p>
-				</div>
+        </ul>
+    </aside>
 
-				<div class="center">
-					<h1>Whiteboard</h1>
-					<p>Draw live and <br>communicate with friends.</p>
-					<img class="project-img" src="assets/Images/Wb.png" alt="Whiteboard">
+    <footer id="footer">
+        <div id="end">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="./about.html">About</a></li>
+                </ul>
+            </nav>
+            <p id="copyWright">&copy2019</p>
+        </div>
 
-				</div>
-
-			</div>
-
-			<div class="carousel-item">
-				<div class="left">
-					<p><a href="https://mthaoqk.github.io/HangmanGame/" target="_blank"> Play</a> a game of Hangman<br>
-						to guess my top 5 Kanye Albums.</p>
-				</div>
-
-				<div class="center">
-					<h1>Ye</h1>
-					<p>Hangman.<br>Game of guesses.</p>
-					<img class="project-img" src="assets/Images/Ye.png" alt="Ye">
-					<br>
-					<a href="https://mthaoqk.github.io/HangmanGame/" target="_blank"></a>
-				</div>
-
-			</div>
-
-		</div>
-
-		<!-- ////////////////MOBILE///////////////////////// -->
-		<div id="carousel-mobile">
-			<div class="carousel-item-mob">
-				<div class="left">
-					<p> Play a game of Tetris made from JavaScript.</p>
-				</div>
-
-				<div class="center">
-					<h1>Tetris</h1>
-					<a href="https://mthaoqk.github.io/Tetris/" target="_blank"><img class="goPlay" src="assets/Images/play.png" /></a>
-					<p>Tetris is a tile-matching puzzle video game.</p>
-					<img class="project-img" src="assets/Images/TetrisSC.png" alt="">
-					<br>
-				</div>
-			</div>
-
-			<div class="carousel-item-mob">
-				<div class="left">
-					<p>An online whiteboard, which can be used by <br>
-						multiple people in realtime.
-						<br>Boards can be downloaded</p>
-				</div>
-
-				<div class="center">
-					<h1>Whiteboard</h1>
-					<a href="https://whiteboardstudio.herokuapp.com/" target="_blank"><img class="goPlay" src="assets/Images/play.png" /></a>
-					<p>Draw live and communicate with friends.</p>
-					<img class="project-img" src="assets/Images/Wb.png" alt="">
-				</div>
-			</div>
-
-			<div class="carousel-item-mob">
-				<div class="left">
-					<p>Play a game of Hangman<br>
-						to guess my top 5 Kanye Albums.</p>
-				</div>
-
-				<div class="center">
-					<h1>Ye</h1>
-					<a href="https://mthaoqk.github.io/HangmanGame/" target="_blank"><img class="goPlay" src="assets/Images/play.png" /></a>
-					<p>Hangman.<br>Game of guesses.</p>
-					<img class="project-img" src="assets/Images/Ye.png" alt="Ye">
-				</div>
-
-			</div>
-		</div>
-
-		<!-- ////////////////MOBILE///////////////////////// -->
-
-		<div class="bottom">
-			<img src="assets/Images/Meng.png" alt="Profile pic" class="profile-pic">
-			<h1>Meng Thao</h1>
-			<div id="me" class="about-me">
-				<p>Graduate at the U of Minnesota Coding bootcamp. As tech is always evolving and my goal of being a student at
-					life, I truly believe I can bond the two
-					to work together to continuously improve and grow.
-					<br>
-					Check out more projects at my <a href="https://github.com/mthaoqk" target="_blank">Github</a>, or contact me
-					through <a href="mailto:mthaoqk@gmail.com">Email</a>.</p>
-			</div>
-
-			<div id="skill">
-				<p>Currently working more indepth with:</p>
-				<ul>
-					<li><i class="devicon-javascript-plain colored"> JavaScript</i></li>
-					<li><i class="devicon-react-plain-wordmark colored"> React</i></li>
-					<li><i class="devicon-photoshop-plain colored">Photoshop</i></i></li>
-				</ul>
-				<p>Languages/Databases touched:</p>
-				<ul>
-					<li><i class="devicon-javascript-plain colored"> JavaScript</i></li>
-					<li><i class="devicon-react-plain-wordmark colored"> React</i></li>
-					<li><i class="devicon-jquery-plain colored"> JQuery</i></li>
-					<li><i class="devicon-nodejs-plain colored"> Node.js</i></li>
-					<li><i class="devicon-express-original colored"> Express</i></li>
-					<li><i class="devicon-heroku-plain-wordmark colored"> Heroku</i></li>
-					<li><i class="devicon-mysql-plain colored"> MySQL</i></li>
-					<li><i class="devicon-mongodb-plain-wordmark colored"> MongoDB</i></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+    </footer>
 
 
-	<script src="assets/JavaScript/scripts.js"></script>
-</body>
+
+
+
+
+
 
 </html>
